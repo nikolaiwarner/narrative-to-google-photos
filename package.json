@@ -1,0 +1,19 @@
+{
+  "name": "narrative-to-google-photos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Warner",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "hbs": "^4.0.0",
+    "request": "^2.72.0"
+  }
+}

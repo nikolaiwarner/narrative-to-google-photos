@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Narrative To Google Photos</title>
+  <script type="javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<script type="javascript">
+  function fetchTodaysVideos(req) {
+    var narrative_token = '{{session.narrative_token}}';
+    var options = {
+      url: 'https://narrativeapp.com/api/v2/moments/',
+      headers: {
+        'Authorization': 'Bearer ' + narrative_token
+      }
+    };
+
+    console.log(narrative_token, options);
+    if (narrative_token) {
+      $.get(options, function(err, httpResponse, body) {
+        console.log(body);
+      });
+    }
+  }
+
+  // oauth: {{sesson}}
+</script>
+</body>
+</html>
