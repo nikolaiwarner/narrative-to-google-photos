@@ -46,7 +46,7 @@ app.get('/narrative/oauth/callback', function (req, res) {
       "Authorization": authString
     },
     formData: {
-      grant_type: "client_credentials", //authorization_code
+      grant_type: "authorization_code",
       code: req.session.narrative_oauth_code,
       redirect_uri: process.env.narrative_token_redirect_uri,
       client_id: process.env.narrative_client_id
@@ -69,7 +69,7 @@ app.get('/narrative/token/callback', function (req, res) {
   req.session.narrative_token = res.token;
 });
 
-app.listen(80, function () {});
+app.listen(3000, function () {});
 
 
 
